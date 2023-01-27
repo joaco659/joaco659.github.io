@@ -1,0 +1,16 @@
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap';
+
+$font-size-tiny: 16px;
+$font-size-normal: 21px;
+$font-size-big: 32px;
+$font-size-bigger: 40px;
+
+$font-weight-thin: 200;
+$font-weight-normal: 450;
+$font-weight-big: 600; 
+
+@mixin fontSans($size: 21px, $weight: 450) {
+	font-family: 'Open Sans', sans-serif;
+	font-size: $size;
+	font-weight: $weight;
+}

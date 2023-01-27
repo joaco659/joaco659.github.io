@@ -1,0 +1,13 @@
+{
+  "name": "practicar",
+  "version": "1.0.0",
+  "description": "Esto es un proyecto (o varios) para practicar mis habilidades de programacion.",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass ./src/styles/main.scss ./public/styles.css -w --no-source-map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}

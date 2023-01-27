@@ -1,0 +1,16 @@
+@mixin transform($prop) {
+	transform: $prop;
+	-webkit-transform: $prop;
+	-ms-transform: $prop;
+}
+
+@mixin animation($prop) {
+	-webkit-animation: $prop;
+	animation: $prop;
+}
+
+@mixin box-shadow($prop) {
+	-webkit-box-shadow: $prop;
+	-moz-box-shadow: $prop;
+	box-shadow: $prop;
+}

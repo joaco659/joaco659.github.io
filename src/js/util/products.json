@@ -1,0 +1,20 @@
+{
+	"productos": {
+		"carne": {
+			"precio": 100,
+			"stock": "Mayor"
+		},
+		"pollo": {
+			"precio": 80,
+			"stock": "Medio"
+		},
+		"cerdo": {
+			"precio": 90,
+			"stock": "Mayor"
+		},
+		"pescado": {
+			"precio": 90,
+			"stock": "Menor"
+		}
+	}
+}

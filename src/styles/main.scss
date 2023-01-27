@@ -1,0 +1,73 @@
+@import 'scss/tipography.scss';
+@import 'scss/vendor-prefixes.scss';
+
+
+body {
+	background: #dedede;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.products-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.product {
+	margin: 0.5rem;
+	width: clamp(5rem, 10rem, 15rem);
+	background: #fafafa;
+	padding: 0.5rem 0.7rem;
+	border: 5px solid #ffce00;
+	border-radius: 0.5rem;
+	font-family: sans-serif;
+	@include box-shadow(15px 17px 6px -6px rgba(0,0,0,0.27));
+
+	&__name {
+		margin: 5px 0;
+		text-align: center;
+	}
+	&__name:first-letter {
+		text-transform: capitalize;
+	}
+
+	&__price {
+		color: #38E130;
+		position: relative;
+		&:after {
+			content: '$';
+		}
+	}
+
+	&__stock {
+		position: relative;
+		&:before {
+			content: 'Stock: ';
+			color: #000;
+		}
+
+		&--Mayor {
+			color: #2BDC3C;
+		}
+		&--Medio {
+			color: #FAD03F;
+		}
+		&--Menor {
+			color: #EB1C3E;
+		}
+	}
+}
+
+#get-products {
+	width: clamp(12em, 10rem, 15rem);
+	border: none;
+	background: #EC224D;
+	@include fontSans();
+	padding: 0.5rem;
+	border-radius: 1rem;
+	cursor: pointer;
+}
