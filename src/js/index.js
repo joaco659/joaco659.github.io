@@ -1,32 +1,55 @@
 
+// Modulos
+import Splide from '@splidejs/splide';
+import * as showPromoModal from './promoModals.js';
 
+// Mostrar la burga
+document.querySelector('.header__burger__button').addEventListener('click', e => {
+	document.querySelector('.header__burger__links').classList.toggle("active");
+	e.target.classList.toggle("fa-bars");
+	e.target.classList.toggle("fa-xmark");
+});
 
-const getProductsBtn = document.getElementById('get-products')
-const productsContainer = document.querySelector('.products-container')
+// Carrusel
+document.addEventListener('DOMContentLoaded', () => {
+	new Splide( '.splide', {
+		type: 'loop',
+		autoplay: true,
+	}).mount();
+})
 
-getProductsBtn.addEventListener('click', async () => {
-	const products = new Map([])
-	try {
-		const axiosProducts = await axios.get('../src/js/util/products.json')
-		console.log(axiosProducts)
-		Object.entries(axiosProducts.data.productos).map(([name, value]) => {
-			products.set(name, [value.precio, value.stock])
-		})
-		console.log(products)
+// Productos
+// (parte mas explicada)
+const modal = document.querySelector('.product-modal');
+const modalBackground = document.querySelector('.bg');
 
-		for (let [name, value] of products.entries()) {
-			console.log(`${name} - ${value[1]} - ${value[0]}`)
-			let PRODUCT_HTML = `
-				<div class="product">
-					<h2 class="product__name">${name}</h2>
-					<h3 class="product__price">${value[0]}</h3>
-					<b class="product__stock product__stock--${value[1]}">${value[1]}</b>
-				</div>
-			`
-			productsContainer.innerHTML += PRODUCT_HTML
-		}
-	}
-	catch (error) {
-		console.error(error)
+// Funcion para cambiar el contenido del modal segun el producto
+const productModal = (id) => {
+	modal.children[1].textContent = `Producto ${id}`;
+	modal.children[2].textContent = `Descripcion del producto ${id}`;
+	modal.children[3].textContent = `${Math.round(Math.random() * 1500)}$`;
+
+	modal.classList.toggle('active')
+	modalBackground.classList.toggle('active')
+}
+
+// Cuando se toque el modal, que se quite
+window.addEventListener('click', e => {
+	if (e.target == modalBackground) {
+		modal.classList.toggle('active');
+		modalBackground.classList.toggle('active');
 	}
 })
+
+const productsContainer = document.getElementById('productos');
+const products = [];
+
+// Bucle que recorre todos los productos cargados directamente del html
+// Cuando se carguen de una base de datos, este bucle se combina con el mismo que carga los productos
+// Notación asintótica: O(n)
+for (let product of productsContainer.children) {
+	product.addEventListener('click', () => {
+		productModal(product.id)
+	})
+	products.push(product)
+}

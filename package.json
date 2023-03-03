@@ -1,13 +1,23 @@
 {
-  "name": "practicar",
+  "name": "patocriollo",
   "version": "1.0.0",
-  "description": "Esto es un proyecto (o varios) para practicar mis habilidades de programacion.",
-  "main": "index.js",
+  "description": "Pagina web de pato criollo",
+  "private": true,
   "scripts": {
-    "build-css": "sass ./src/styles/main.scss ./public/styles.css -w --no-source-map"
+    "build-css": "sass ./src/styles/main.scss ./public/styles/styles.css -w --no-source-map",
+    "server": "live-server --browser=Firefox",
+    "build": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "axios": "^1.2.6"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.1.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "xlsx": "^0.18.5"
   }
 }
