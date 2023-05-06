@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Pato Criollo</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="keywords" content="polleria, artesanal, fresco, alimentos">
+	<meta name="description" content="Granja y derivados de elaboración artesanal.">
+
+	<link rel="stylesheet" type="text/css" href="./styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="./styles/splide.min.css">
+	<link rel="icon" type="image/png" href="./favicon.ico"/>
+	<!-- Icons -->
+	<script src="https://kit.fontawesome.com/975796b917.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<!-- Cabecera -->
+	<header class="header">
+		<img class="header__logo" src="./styles/img/logo.png" alt="Pato Criollo Logo" title="Pato Criollo" load="lazy">
+		<h1 class="header__title">Pato Criollo</h1>
+		<!-- Burga para moviles (para desktop son solo links) -->
+		<nav class="header__burger">
+			<button class="header__burger__button">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+			<ul class="header__burger__links">
+				<li><a href="#productos">Productos</a></li>
+				<li><a href="#sucursal">Sucursal</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- Promociones (popup) -->
+	<!-- Solo se muestran cuando hay una promocion -->
+	<button class="promotions-btn">
+		<i class="fa-solid fa-gift"></i>
+	</button>
+	<div class="promotions">
+		<i class="fa-solid fa-xmark"></i>
+		<a href="" target="_blank" class="promotions__link">
+			<img src="./styles/img/placeholder_promo2.png" alt="Promo nueva de PATO CRIOLLO">
+		</a>
+	</div>
+
+	<!-- Carrusel -->
+	<section class="splide" aria-label="Productos relevantes">
+		<div class="splide__track">
+			<ul class="splide__list">
+				<div class="splide__slide carousel-product">
+					<img src="./styles/img/placeholder_img.png" alt="Producto" class="carousel-product__picture">
+					<h2 class="carousel-product__title">Producto 1</h2>
+					<button class="carousel-product__more">Ver mas</button>
+				</div>
+				<div class="splide__slide carousel-product">
+					<img src="./styles/img/placeholder_img.png" alt="Producto" class="carousel-product__picture">
+					<h2 class="carousel-product__title">Producto 2</h2>
+					<button class="carousel-product__more">Ver mas</button>
+				</div>
+				<div class="splide__slide carousel-product">
+					<img src="./styles/img/placeholder_img.png" alt="Producto" class="carousel-product__picture">
+					<h2 class="carousel-product__title">Producto 3</h2>
+					<button class="carousel-product__more">Ver mas</button>
+				</div>
+				<div class="splide__slide carousel-product">
+					<img src="./styles/img/placeholder_img.png" alt="Producto" class="carousel-product__picture">
+					<h2 class="carousel-product__title">Producto 4</h2>
+					<button class="carousel-product__more">Ver mas</button>
+				</div>
+				<div class="splide__slide carousel-product">
+					<img src="./styles/img/placeholder_img.png" alt="Producto" class="carousel-product__picture">
+					<h2 class="carousel-product__title">Producto 5</h2>
+					<button class="carousel-product__more">Ver mas</button>
+				</div>
+				<div class="splide__slide carousel-product">
+					<img src="./styles/img/placeholder_img.png" alt="Producto" class="carousel-product__picture">
+					<h2 class="carousel-product__title">Producto 6</h2>
+					<button class="carousel-product__more">Ver mas</button>
+				</div>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Productos -->
+	<!-- Titulo aparte -->
+	<h2 class="products-title">Productos</h2>
+	<p class="products-paragraph">Frescos y de calidad</p>
+	<!-- Fondo para modales -->
+	<div class="bg"></div>
+
+	<!-- Contenedor de productos -->
+	<section id="productos">
+		<!-- Modal de productos -->
+		<div class="product-modal">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" title="Producto" class="product-modal__img">
+			<h2 class="product-modal__title"></h2>
+			<p class="product-modal__description"></p>
+			<b class="product-modal__price"></b>
+			<p class="product-modal__advise">Comprar en la sucursal</p>
+		</div>
+
+		<div class="product" id="1">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" title="Producto" class="product__img">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="2">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="3">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="4">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="5">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="6">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="7">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="8">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="9">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="10">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="11">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+		<div class="product" id="12">
+			<img load="lazy" src="./styles/img/placeholder_img.png" alt="Producto" class="product__img" title="Producto">
+			<h3 class="product__title">Producto</h3>
+		</div>
+	</section>
+
+	<!-- Sucursal -->
+	<section id="sucursal">
+		<h2 class="sucursal-title">Sucursal</h2>
+		<i class="sucursal-paragraph">Donde nos encontras</i>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1464.8986026198631!2d-58.662536743058226!3d-34.48802321892784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca34f589fcccb%3A0x2f6b8df8f0308206!2sILC%2C%20Av.%20del%20Libertador%20Gral.%20San%20Mart%C3%ADn%201157%2C%20B1614%20Villa%20de%20Mayo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1677452815754!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<p class="location-paragraph">Av. del Libertador Gral. San Martín 1157</p>
+	</section>
+
+	<!-- Contacto y reseñas -->
+	<section id="contacto">
+		<div class="contact">
+			<h3 class="contact__title">Contactanos</h3>
+			<p class="contact__paragraph">por nuestro</p>
+			<a href="https://www.instagram.com/patocriollo_/" target="_blank" class="contact__ig"><i class="fa-brands fa-instagram"></i> Instagram</a>
+			<a href="https://api.whatsapp.com/send?phone=+5491133245736&text=Hola, quisiera hacer una consulta!" target="_blank" class="contact__wsp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+		</div>
+		<!-- <div class="reviews"></div> -->
+	</section>
+
+	<!-- Pie de pagina y creditos (jeje) -->
+	<footer class="credits">
+		<div class="credits__joaco">
+			<p>Sitio hecho por:</p>
+			<a target="_blank" href="https://www.instagram.com/joacoo__659/">Joaquin Medina</a>
+		</div>
+		<div class="credits__logo">
+			<img src="./styles/img/logo2.png" alt="Pato Criollo" title="Gracias por tu visita">
+		</div>
+		<div class="credits__links">
+			<a href="#productos">Productos</a>
+			<a href="#sucursal">Sucursal</a>
+			<a href="#contacto">Contacto</a>
+		</div>
+	</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
